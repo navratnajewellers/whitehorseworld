@@ -1,4 +1,4 @@
-import nextPWA from "next-pwa";
+import nextPwa from "next-pwa";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -9,24 +9,12 @@ const nextConfig = {
   },
 };
 
-const withPWA = nextPWA({
+const withPWA = nextPwa({
   dest: "public",
-  disable: process.env.NODE_ENV === "development",
   register: true,
   skipWaiting: true,
-  runtimeCaching: [
-    {
-      urlPattern: /\.(?:png|jpg|jpeg|svg|webp)$/,
-      handler: "CacheFirst",
-      options: {
-        cacheName: "static-images",
-        expiration: {
-          maxEntries: 32,
-          maxAgeSeconds: 24 * 60 * 60, // 24 hours
-        },
-      },
-    },
-  ],
+  disable: process.env.NODE_ENV === "development",
+  buildExcludes: [/middleware-manifest\.json$/], // for static export compatibility
 });
 
 // export default nextConfig;

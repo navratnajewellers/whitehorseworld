@@ -1,5 +1,3 @@
-import SWRegister from "./sw-register";
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // import "rsuite/dist/rsuite.min.css";
@@ -18,6 +16,21 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "White Horse World | Event Managment in Ranchi",
   description: "White Horse World is Event Managment in Ranchi",
+  icons: {
+    icon: "/images/favicon/android-chrome-192x192.png",
+    apple: "/images/favicon/android-chrome-192x192.png",
+  },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+  },
+  other: {
+    "mobile-web-app-capable": "yes", // extra meta tag
+  },
+};
+
+export const viewport = {
+  themeColor: "#000000",
 };
 
 export default function RootLayout({ children }) {
@@ -27,7 +40,6 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <SWRegister />
       </body>
     </html>
   );
