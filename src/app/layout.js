@@ -1,3 +1,5 @@
+import SWRegister from "./sw-register";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // import "rsuite/dist/rsuite.min.css";
@@ -25,6 +27,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <SWRegister />
       </body>
     </html>
   );
