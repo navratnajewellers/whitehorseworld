@@ -24,7 +24,12 @@ const WhHeader = () => {
     <header
       className={` h-sec1-header-container w-full  ${direction == "Up" || direction == "Idle" ? " head-dir-up " : " head-dir-down "} `}
     >
-      <div className=" header-container ">
+      <div
+        className=" header-container "
+        style={{
+          backgroundColor: `${lastScroll < 100 ? "transparent" : "black"}`,
+        }}
+      >
         <nav className="h-sec1-container">
           <a href="#" className=" h-link ">
             Home

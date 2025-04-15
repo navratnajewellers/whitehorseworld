@@ -82,7 +82,7 @@ export default function HomeWork() {
   return (
     <>
       {/* Work Section */}
-      <section className="bg-white py-20 px-4">
+      <section className=" py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -94,68 +94,7 @@ export default function HomeWork() {
           </motion.h2>
 
           <div className="grid md:grid-cols-3 gap-10">
-            {[
-              {
-                title: "GOVERNMENT EVENTS",
-                subtitle: "Government Events",
-                img: "/images/work/work-government-event.jpg",
-              },
-              {
-                title: "CORPORATE EVENTS",
-                subtitle: "Corporate Events",
-                img: "/images/work/work-corporate-event.jpg",
-              },
-              {
-                title: "SPORTS MANAGEMENT",
-                subtitle: "Sports Management",
-                img: "/images/work/work-sports.jpg",
-              },
-              {
-                title: "Artist Management",
-                subtitle: "Live Entertainment Events",
-                img: "/images/work/work-artist-management.png",
-              },
-              {
-                title: "International Acts",
-                subtitle: "Trade Shows and Expos",
-                img: "/images/work/work-international-events.jpg",
-              },
-              {
-                title: "Exhibition & Fairs",
-                subtitle: "Launch Events",
-                img: "/images/work/work-exhibition-fair.jpg",
-              },
-              {
-                title: "Database & Response Management",
-                subtitle: "Launch Events",
-                img: "/images/work/work-database-management.jpg",
-              },
-              {
-                title: "Brand Activation & Marketing Services",
-                subtitle: "Launch Events",
-                img: "/images/work/work-rural-marketing-02-655x545.jpg",
-              },
-              {
-                title: "DIGITAL MARKETING",
-                subtitle: "Launch Events",
-                img: "/images/work/work-SOCIAL-NETWORKING-02-655x545.jpg",
-              },
-              {
-                title: "Rural Marketing",
-                subtitle: "Launch Events",
-                img: "/images/work/work-rural-marketing-03-655x545.jpg",
-              },
-              {
-                title: "Weddings",
-                subtitle: "Launch Events",
-                img: "/images/work/work-wed5-655x545.jpg",
-              },
-              {
-                title: "THEME INSTALLATIONS",
-                subtitle: "Launch Events",
-                img: "/images/work/work-theme1-655x545.jpg",
-              },
-            ].map((item, index) => (
+            {workData.map((item, index) => (
               <motion.a
                 href="#"
                 key={index}

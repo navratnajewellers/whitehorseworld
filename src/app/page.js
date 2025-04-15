@@ -2,8 +2,13 @@
 
 import HomeAbout from "./components/home/HomeAbout";
 import HomeCarousel from "./components/home/HomeCarousel";
+import HomeCarousel2 from "./components/home/HomeCarousel2";
 import HomeClient from "./components/home/HomeClient";
+import HomeContact from "./components/home/HomeContact";
 import HomeWork from "./components/home/HomeWork";
+import HomeWork2 from "./components/home/HomeWork2";
+import Testimonials from "./components/home/Testimonials";
+import WhFooter from "./components/WhFooter";
 import WhHeader from "./components/WhHeader";
 import "./styles/home.css";
 import { motion } from "motion/react";
@@ -13,9 +18,9 @@ export default function Home() {
     <>
       <WhHeader />
 
-      <div className=" home-i-carousel-cont">
+      {/* <div className=" home-i-carousel-cont">
         <HomeCarousel />
-      </div>
+      </div> */}
 
       {/* <section className="relative h-screen bg-cover bg-center bg-[url('/images/slides/slider3.jpg')]"> */}
       {/* <section className="relative h-screen flex items-center justify-center text-center bg-[url('/images/slides/slider3.jpg')] bg-cover bg-center">
@@ -49,9 +54,43 @@ export default function Home() {
 
       <HomeAbout />
 
-      <HomeWork />
+      <HomeWork2 />
+
+      {/* <HomeWork /> */}
 
       <HomeClient />
+
+      <div className=" home-i-carousel-cont">
+        <div className=" text-center py-14 ">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+            className=" text-5xl md:text-4xl font-bold text-yellow-400 "
+          >
+            Where Vision Meets Reality
+          </motion.h2>
+          <motion.h5
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+          >
+            Explore the visuals that reflect our dedication to creating
+            unforgettable events
+          </motion.h5>
+        </div>
+        <HomeCarousel2 />
+      </div>
+
+      <div>
+        <Testimonials />
+      </div>
+
+      <div>
+        <HomeContact />
+      </div>
+
+      <WhFooter />
     </>
   );
 }

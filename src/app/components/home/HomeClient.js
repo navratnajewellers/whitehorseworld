@@ -5,11 +5,33 @@ import { motion } from "framer-motion";
 
 export default function HomeClient() {
   return (
-    <section className="bg-white py-16 px-4 overflow-hidden">
-      <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-        OUR CLIENTS
-      </h2>
-      <div className="relative overflow-hidden">
+    <section
+      className=" py-32 px-4 overflow-hidden"
+      // style={{ border: "solid 1px red" }}
+    >
+      <motion.h2
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+        className="text-4xl font-bold text-center mb-4 text-yellow-400"
+      >
+        WHO WE WORK WITH
+      </motion.h2>
+      <motion.h5
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+        className=" text-center  mb-32 "
+      >
+        From Global Giants to Visionary Startups — We Deliver Impact Across
+        Every Collaboration
+      </motion.h5>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+        className="relative overflow-hidden"
+      >
         <motion.div
           className="flex gap-10 items-center whitespace-nowrap"
           animate={{ x: ["0%", "-100%"] }}
@@ -45,11 +67,11 @@ export default function HomeClient() {
                 key={index}
                 src={src}
                 alt={`Client ${index + 1}`}
-                className="h-20 w-auto object-contain filter grayscale hover:grayscale-0 transition"
+                className="h-32 w-auto object-contain filter grayscale hover:grayscale-0 transition"
               />
             ))}
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 }

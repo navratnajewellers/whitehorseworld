@@ -80,8 +80,10 @@ body {
   font-style: normal;
   /* letter-spacing: 0.5px; */
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
+  /* background-color: #f8f8f8;
+  color: #333; */
+  background-color: black;
+  color: #ffffff;
   /* width: 100vw; */
   width: 100%;
   overflow-x: hidden !important;
@@ -121,11 +123,11 @@ a:hover {
 }
 
 .main-color {
-  color: #ff8b38;
+  color: oklch(85.2% 0.199 91.936); /* yellow color */
 }
 
 .main-color-imp {
-  color: #ff8b38 !important ;
+  color: oklch(85.2% 0.199 91.936) !important ;
 }
 
 .main-para-col {
@@ -158,4 +160,15 @@ a:hover {
 
 .animate-blink {
   animation: blink 1s step-start infinite;
+}
+
+/* contact form */
+.contact-form-container {
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form-container {
+    margin: 65px 2% 40px;
+  }
 }
