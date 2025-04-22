@@ -28,7 +28,7 @@ export default function HomeAbout() {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 backdrop-brightness-75 z-0" />
+      <div className="absolute inset-0 bg-black/60 backdrop-brightness-88 z-0" />
 
       {/* Animated Content */}
       <motion.div
@@ -46,7 +46,7 @@ export default function HomeAbout() {
           Creatives, and Motivators.
         </p>
         <motion.a
-          href="#contact"
+          href="/contact"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="inline-block px-6 py-3 bg-yellow-500 text-black font-semibold rounded-xl shadow-lg transition hover:bg-yellow-400"

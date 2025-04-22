@@ -8,6 +8,7 @@ import HomeContact from "./components/home/HomeContact";
 import HomeWork from "./components/home/HomeWork";
 import HomeWork2 from "./components/home/HomeWork2";
 import Testimonials from "./components/home/Testimonials";
+import ScrollPage from "./components/ScrollPage";
 import WhFooter from "./components/WhFooter";
 import WhHeader from "./components/WhHeader";
 import "./styles/home.css";
@@ -16,6 +17,8 @@ import { motion } from "motion/react";
 export default function Home() {
   return (
     <>
+      <ScrollPage />
+
       <WhHeader />
 
       {/* <div className=" home-i-carousel-cont">

@@ -50,7 +50,7 @@ const WhHeader = () => {
         </nav>
         <section className="h-sec2-container">
           <a href="/" className="imageWrapper">
-            <img src="/images/whem-logo-all.png" alt="company-logo"></img>
+            <img src="/images/whem-logo-all_small.png" alt="company-logo"></img>
           </a>
           <div className={`menu-toggle  ${isMobile ? "" : "dis-none"}`}>
             <Hamburger

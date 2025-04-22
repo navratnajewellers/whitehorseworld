@@ -75,7 +75,7 @@
 } */
 
 .h-sec2-container .imageWrapper {
-  width: 180px;
+  width: 85px;
   display: inline-block;
   perspective: 1000px;
 }
@@ -94,7 +94,7 @@
 } */
 
 .mobile-header-nav-container {
-  border: solid 1px red;
+  /* border: solid 1px red; */
   background-color: black;
   display: flex;
   flex-direction: column;
