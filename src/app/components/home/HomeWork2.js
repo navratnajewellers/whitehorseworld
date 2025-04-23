@@ -92,7 +92,7 @@ export default function HomeWork2() {
       </motion.h2>
       <motion.h5
         className=" text-center "
-        style={{ marginBottom: "105px", marginTop: "25px" }}
+        style={{ marginBottom: "85px", marginTop: "25px" }}
       >
         A Glimpse into the World-Class Events and Experiences We&apos;ve Brought
         to Life
@@ -136,7 +136,7 @@ export default function HomeWork2() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="w-full md:w-1/2 text-center md:text-left"
             >
-              <h2 className="text-2xl md:text-4xl font-bold mb-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-yellow-400 mb-6 ">
                 {item.title}
               </h2>
               <p className="text-lg text-gray-300">{item.description}</p>

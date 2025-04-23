@@ -50,12 +50,28 @@ export default function CareerPage() {
 
       <WhHeader />
 
-      <div className="bg-black text-white min-h-screen px-6 py-12 mt-36 ">
+      <div className="bg-black text-white min-h-screen px-6 py-12 mt-14 ">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-6 text-yellow-400">
+        <div
+          className="relative h-[280px] md:h-[350px] w-full bg-cover bg-center flex items-center justify-center"
+          style={{
+            backgroundImage: "url('/images/work/work-database-management.jpg')",
+          }}
+        >
+          {/* Semi-transparent dark overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/80"></div>
+
+          {/* Heading Text */}
+          <h2 className="relative text-3xl md:text-5xl text-yellow-400 font-bold text-center px-4 z-10">
             Build Your Future with White Horse
           </h2>
+        </div>
+
+        {/* text */}
+        <div className="text-center mb-20 mt-14 ">
+          {/* <h2 className="text-4xl font-bold mb-6 text-yellow-400">
+            Build Your Future with White Horse
+          </h2> */}
           <p className="text-gray-400 max-w-3xl mx-auto leading-relaxed">
             White Horse Event Management is aggressively expanding and is always
             on the lookout for smart and talented folks to join its team.
@@ -148,10 +164,30 @@ export default function CareerPage() {
               </a>
             </span>
           </p>
-          <button className="bg-indigo-600 px-6 py-2 rounded hover:bg-indigo-500 transition">
+          <button
+            className="bg-indigo-600 px-6 py-2 rounded hover:bg-indigo-500 transition cursor-pointer "
+            onClick={() => {
+              window.location.href = "mailto:career@whitehorseevent.com";
+            }}
+          >
             Submit Resume
           </button>
         </div>
+      </div>
+
+      <div
+        className="relative h-[280px] md:h-[350px] w-full bg-cover bg-center flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/images/work/work-database-management.jpg')",
+        }}
+      >
+        {/* Semi-transparent dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/80"></div>
+
+        {/* Heading Text */}
+        <h2 className="relative text-3xl md:text-5xl text-yellow-400 font-bold text-center px-4 z-10">
+          Build Your Future with White Horse
+        </h2>
       </div>
 
       <WhFooter />
