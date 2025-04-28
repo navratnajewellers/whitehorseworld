@@ -88,6 +88,8 @@ body {
   width: 100%;
   overflow-x: hidden !important;
   /* border: solid 1px red; */
+  position: relative;
+  left: 0;
 }
 
 h1,
@@ -192,8 +194,85 @@ a:hover {
   box-shadow: rgba(255, 255, 110, 0.25) 0px 25px 50px -12px;
 }
 
+.custom-shadow-imp {
+  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+  /* box-shadow: rgb(255, 255, 110) 0px 20px 30px -10px; */
+  /* box-shadow: rgba(255, 255, 110, 0.25) 0px 25px 50px -12px; */
+  box-shadow:
+    rgba(255, 255, 110, 0.4) -5px 5px,
+    rgba(255, 255, 110, 0.3) -10px 10px,
+    rgba(255, 255, 110, 0.2) -15px 15px,
+    rgba(255, 255, 110, 0.1) -20px 20px,
+    rgba(255, 255, 110, 0.05) -25px 25px !important;
+}
+
+.custom-shadow2-imp {
+  box-shadow:
+    rgba(255, 255, 110, 0.4) 0px 5px,
+    rgba(255, 255, 110, 0.3) 0px 10px,
+    rgba(255, 255, 110, 0.2) 0px 15px,
+    rgba(255, 255, 110, 0.1) 0px 20px,
+    rgba(255, 255, 110, 0.05) 0px 25px !important;
+}
+
+.custom-shadow3-imp {
+  box-shadow: rgba(255, 255, 110, 0.25) 0px 25px 50px -12px !important;
+}
+
+/* custom shadow with hover */
+.custom-shadow-h-imp:hover {
+  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+  /* box-shadow: rgb(255, 255, 110) 0px 20px 30px -10px; */
+  /* box-shadow: rgba(255, 255, 110, 0.25) 0px 25px 50px -12px; */
+  box-shadow:
+    rgba(255, 255, 110, 0.4) -5px 5px,
+    rgba(255, 255, 110, 0.3) -10px 10px,
+    rgba(255, 255, 110, 0.2) -15px 15px,
+    rgba(255, 255, 110, 0.1) -20px 20px,
+    rgba(255, 255, 110, 0.05) -25px 25px !important;
+}
+
+.custom-shadow2-h-imp:hover {
+  box-shadow:
+    rgba(255, 255, 110, 0.4) 0px 5px,
+    rgba(255, 255, 110, 0.3) 0px 10px,
+    rgba(255, 255, 110, 0.2) 0px 15px,
+    rgba(255, 255, 110, 0.1) 0px 20px,
+    rgba(255, 255, 110, 0.05) 0px 25px !important;
+}
+
+.custom-shadow3-h-imp:hover {
+  box-shadow: rgba(255, 255, 0, 0.45) 0px 25px 50px -12px !important;
+}
+
+.custom-shadow4-h-imp:hover {
+  box-shadow: rgba(255, 255, 0, 0.85) 0px 0px 70px -12px !important;
+}
+
 @media screen and (max-width: 768px) {
   .contact-form-container {
     margin: 65px 2% 40px;
   }
+}
+
+.custom-button-anim {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.custom-button-anim::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: oklch(78.2% 0.199 91.936);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.custom-button-anim:hover::before {
+  width: 100%;
 }
