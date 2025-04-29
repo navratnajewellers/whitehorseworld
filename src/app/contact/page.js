@@ -14,6 +14,21 @@ export default function ContactUsPage() {
 
       <WhHeader />
       <div className="bg-black text-white min-h-screen px-6 py-12">
+        {/* Contact form */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
+          className=" mt-36 w-2/3 m-auto mb-12 "
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-yellow-400 mb-16 ">
+              Reach out to us
+            </h2>
+          </div>
+          <ContactForm />
+        </motion.div>
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -108,21 +123,6 @@ export default function ContactUsPage() {
             referrerPolicy="no-referrer-when-downgrade"
             title="Google Map"
           ></iframe>
-        </motion.div>
-
-        {/* Contact form */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
-          className=" mt-36 w-2/3 m-auto mb-12 "
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-yellow-400 mb-16 ">
-              Reach out to us
-            </h2>
-          </div>
-          <ContactForm />
         </motion.div>
       </div>
 

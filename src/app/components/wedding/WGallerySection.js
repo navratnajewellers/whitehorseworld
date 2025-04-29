@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { motion } from "motion/react";
+import { Divider } from "rsuite";
+import { FaDiamond } from "react-icons/fa6";
 
 export default function WGallerySection() {
   const galleryData = [
@@ -51,26 +53,80 @@ export default function WGallerySection() {
       image:
         "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/artist-management1-290x274.jpg",
     },
+    {
+      image:
+        "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/decor34-290x274.jpg",
+    },
+    {
+      image:
+        "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/decor40-290x274.jpg",
+    },
+    {
+      image:
+        "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/decor11-290x274.jpg",
+    },
+    {
+      image:
+        "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/wedding-shoot10-290x274.jpg",
+    },
+    {
+      image:
+        "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/intertaiment10-290x274.jpg",
+    },
+    {
+      image:
+        "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/intertaiment9-290x274.jpg",
+    },
+    {
+      image:
+        "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/artist-management14-290x274.jpg",
+    },
+    {
+      image:
+        "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/artist-management13-290x274.jpg",
+    },
+    {
+      image:
+        "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/artist-management8-290x274.jpg",
+    },
+    {
+      image:
+        "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/artist-management4-290x274.jpg",
+    },
+    {
+      image:
+        "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/artist-management2-290x274.jpg",
+    },
+    {
+      image:
+        "https://www.thevelvetweddings.com/wp-content/uploads/2019/02/artist-management1-290x274.jpg",
+    },
   ];
 
   return (
-    <section className="w-full bg-gray-100 py-20 px-4">
-      <h2 className="text-4xl font-bold text-center mb-12 text-black ">
-        Gallery
+    <section className="w-full  py-20 px-4 w-gallery-container ">
+      <h2 className="text-4xl font-bold text-center mb-5 text-yellow-400 ">
+        Wedding Collections
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <Divider
+        className=" w-about-divider text-yellow-400 "
+        style={{ width: "25%", margin: "auto", marginBottom: "76px" }}
+      >
+        <FaDiamond size={10} /> <FaDiamond size={20} className=" ml-1 mr-1 " />
+        <FaDiamond size={10} />
+      </Divider>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-9 max-w-6xl mx-auto">
         {galleryData.map((data, index) => (
           <motion.div
-            initial={{ opacity: 0, scale: 0.7, y: 50 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
               ease: "easeOut",
-              delay: index * 0.2,
+              delay: 0.7,
             }}
-            viewport={{ once: true }}
             key={index}
-            className="overflow-hidden rounded-xl shadow-md"
+            className="overflow-hidden rounded-xl shadow-md border-2 border-pink-400 "
           >
             <Image
               src={data.image}

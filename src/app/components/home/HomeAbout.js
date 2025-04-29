@@ -34,7 +34,7 @@ export default function HomeAbout() {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, delay: 0.6 }}
         className="relative z-10 px-4 text-white max-w-3xl"
       >
         <h1 className="text-4xl md:text-6xl font-extrabold mb-6">

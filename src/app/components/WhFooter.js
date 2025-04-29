@@ -1,7 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { FaInstagram, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaEnvelope,
+  FaFacebookF,
+  FaYoutube,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const WhFooter = () => {
   return (
@@ -73,6 +80,30 @@ const WhFooter = () => {
               className="hover:text-white"
             >
               <FaLinkedinIn />
+            </a>
+            <a
+              href="https://www.facebook.com/whitehorseevent"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-600"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://twitter.com/whitehorseevent"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+            >
+              <FaXTwitter />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCPhlg1vrtGLbqbQe2_WdvCQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-red-500"
+            >
+              <FaYoutube />
             </a>
           </div>
         </div>

@@ -304,3 +304,10 @@ a:hover {
 .custom-button-anim:hover::before {
   width: 100%;
 }
+
+/* about divider */
+.w-about-divider span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

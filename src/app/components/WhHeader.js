@@ -63,7 +63,7 @@ const WhHeader = () => {
           </div>
         </section>
         <nav className="h-sec3-container">
-          <a href="#" className=" h-link ">
+          <a href="/gallery" className=" h-link ">
             Gallery
           </a>
           <a href="/carrer" className=" h-link ">
