@@ -34,17 +34,17 @@ const WhHeader = () => {
       <div
         className=" header-container "
         style={{
-          backgroundColor: `${lastScroll < 100 ? "transparent" : "black"}`,
+          backgroundColor: `${lastScroll < 100 ? "transparent" : "rgba(0, 0, 0, 0.4)"}`,
         }}
       >
         <nav className="h-sec1-container">
-          <a href="#" className=" h-link ">
+          <a href="/" className=" h-link ">
             Home
           </a>
-          <a href="#" className=" h-link ">
+          <a href="/about-us" className=" h-link ">
             Team
           </a>
-          <a href="#" className=" h-link ">
+          <a href="/work" className=" h-link ">
             Work
           </a>
         </nav>
@@ -64,12 +64,12 @@ const WhHeader = () => {
         </section>
         <nav className="h-sec3-container">
           <a href="#" className=" h-link ">
-            Reach
+            Gallery
           </a>
-          <a href="#" className=" h-link ">
+          <a href="/carrer" className=" h-link ">
             Carrer
           </a>
-          <a href="#" className=" h-link ">
+          <a href="/contact" className=" h-link ">
             Contact
           </a>
         </nav>
@@ -83,7 +83,7 @@ const WhHeader = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-            href="#"
+            href="/"
             className=" h-link "
           >
             Home
@@ -92,7 +92,7 @@ const WhHeader = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
-            href="#"
+            href="/about-us"
             className=" h-link "
           >
             Team
@@ -101,7 +101,7 @@ const WhHeader = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
-            href="#"
+            href="/work"
             className=" h-link "
           >
             Work
@@ -113,13 +113,13 @@ const WhHeader = () => {
             href="#"
             className=" h-link "
           >
-            Reach
+            Gallery
           </motion.a>
           <motion.a
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 1.6 }}
-            href="#"
+            href="/carrer"
             className=" h-link "
           >
             Carrer
@@ -128,7 +128,7 @@ const WhHeader = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 1.9 }}
-            href="#"
+            href="/contact"
             className=" h-link "
           >
             Contact

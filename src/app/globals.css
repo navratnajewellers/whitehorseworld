@@ -92,22 +92,50 @@ body {
   left: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
 p,
 button,
 a,
-li {
+li,
+div {
   /* font-family:
     "Raleway", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !important ;
   font-optical-sizing: auto; */
-  font-family:
+  /* font-family:
     var(--font-geist-sans), Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif !important ;
+    sans-serif !important ; */
+  font-family:
+    var(--font-lato), Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !important ;
   font-optical-sizing: auto;
   /* font-style: normal; */
+}
+
+.h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:
+    var(--font-playfair-display), Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif !important ;
+  font-optical-sizing: auto;
+}
+
+.font-ds {
+  font-family:
+    var(--font-dancing-script), Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif !important ;
+}
+
+.font-pd {
+  font-family:
+    var(--font-playfair-display), Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif !important ;
+}
+
+.font-la {
+  font-family:
+    var(--font-lato), Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !important ;
 }
 
 .imageWrapper {

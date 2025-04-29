@@ -11,6 +11,10 @@
   height: 650px;
 }
 
+.w-sec1-bg-container .slick-dots {
+  display: none !important ;
+}
+
 .plan-wedding-button {
   border: solid 2px oklch(85.2% 0.199 91.936);
   /* background-color: oklch(85.2% 0.199 91.936); */
@@ -50,7 +54,7 @@
   position: absolute;
   top: -90%;
   left: 0;
-  width: 25px;
+  width: 8px;
   height: 300%;
   transform: rotate(35deg);
   background: linear-gradient(
@@ -82,14 +86,15 @@
   border-radius: 12px;
   transition: all 0.3s ease;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-color: oklch(78.2% 0.199 91.936);
 }
 
 .wed-button:hover {
   color: #ffffff;
   background-color: transparent;
-  border: solid 1px oklch(85.2% 0.199 91.936);
+  border-color: oklch(85.2% 0.199 91.936);
+  background-color: rgba(0, 0, 0, 0.6);
   box-shadow: rgba(255, 255, 110, 0.95) 0px 25px 50px -12px;
 }
 
@@ -176,4 +181,14 @@
 
 .book-consultation-button:hover {
   color: black;
+}
+
+/* wedding about */
+.w-about-img {
+  border: solid 4px #ffffff;
+}
+
+.w-about-img-small {
+  bottom: -65px;
+  right: -5px;
 }

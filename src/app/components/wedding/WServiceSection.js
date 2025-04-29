@@ -7,75 +7,64 @@ export default function WServiceSection() {
     {
       id: 1,
       image:
-        "https://jaspira.in/wp-content/uploads/elementor/thumbs/Destiantion-wedding-in-Kerala-r0uxk3uh1yqmghlmmlx3v6d655ji4mjs7njp2lqf4o.webp",
-      title: "Planning",
+        "https://jaspira.in/wp-content/uploads/elementor/thumbs/Jiapur-7-qxibxuqoh47pp3j7nbukzzvi99qhy4bi74lun4pm3c.webp",
+      title: "Rajasthan",
       description:
-        "We handle every aspect of service with utmost care and professionalism.",
+        "An exotic destination wedding offers a unique experience, and Kerala’s backwaters with lush greenery and coconut trees create a magical setting.",
       link: "#",
     },
     {
       id: 2,
       image:
-        "https://jaspira.in/wp-content/uploads/elementor/thumbs/shutterstock_313840562-min-1-1144x715-1-pve73kq1gecz21kjisv83uephqgb5y26v90zh9i2vs.webp",
-
-      title: "Venue Selection",
+        "https://jaspira.in/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2023-11-02-at-6.22.58-PM-1-qey08vc78djwrj9ad5yxb6bg51tsq3w7foyqdefy1k.webp",
+      title: "Goa",
       description:
-        "We handle every aspect of service with utmost care and professionalism.",
+        "If you are seeking an incredible destination to get an indelible wedding experience, then you can host your dream destination wedding in Udaipur.",
       link: "#",
     },
     {
       id: 3,
       image:
-        "https://jaspira.in/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2023-11-02-at-9.14.15-PM-qey08ued1jimfxaninkaqojzjnyfiesh3kb8w4hc7s.webp",
-      title: "Decor & Styling",
+        "https://jaspira.in/wp-content/uploads/elementor/thumbs/Destiantion-wedding-in-Kerala-r0uxk3uh1yqmghlmmlx3v6d655ji4mjs7njp2lqf4o.webp",
+      title: "Uttarkhand",
       description:
-        "We handle every aspect of service with utmost care and professionalism.",
+        "Beach weddings in India, especially in South Indian states like Goa and Kerala, create an unforgettable experience for your destination wedding in India.",
       link: "#",
     },
     {
       id: 4,
       image:
-        "https://jaspira.in/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2023-11-02-at-6.22.58-PM-1-qey08vc78djwrj9ad5yxb6bg51tsq3w7foyqdefy1k.webp",
-      title: "Catering",
+        "https://jaspira.in/wp-content/uploads/elementor/thumbs/Why-should-you-consider-Kerala-for-your-destination-Wedding-qdd0gb58eyjcrnnjiswoon1niauhcqphc26uy25w60.webp",
+      title: "Kerela",
       description:
-        "We handle every aspect of service with utmost care and professionalism.",
+        "Your wedding may be destined for you, but your wedding location is definitely planned for you. Jaspira Wedding Planners are here to make your destination wedding in Goa much...",
       link: "#",
     },
     {
       id: 5,
       image:
         "https://jaspira.in/wp-content/uploads/elementor/thumbs/Why-should-you-consider-Kerala-for-your-destination-Wedding-qdd0gb58eyjcrnnjiswoon1niauhcqphc26uy25w60.webp",
-      title: "Photography",
+      title: "Jammu & Kashmir",
       description:
-        "We handle every aspect of service with utmost care and professionalism.",
+        "Ever envisioned yourself tying the knot in the midst of a backwater, on a houseboat? Well, Jaspira’s destination wedding planners in India can make that a reality for you.",
       link: "#",
     },
     {
       id: 6,
       image:
-        "https://jaspira.in/wp-content/uploads/elementor/thumbs/Jiapur-6-qxibxsv03g551vlxyb1bv0cl2hzriq41ivavoksefs.webp",
-      title: "Entertainment",
+        "https://jaspira.in/wp-content/uploads/elementor/thumbs/Shimla-Destiantion-Wedding-e1738400038322-r0uwnpcrgkds8eo0u3p3euq4xz8zs8ww39y4i7rzmg.webp",
+      title: "Himachal Pradesh",
       description:
-        "We handle every aspect of service with utmost care and professionalism.",
+        "Saying YES to a wedding, saying yes to your wedding dress, or accessories is little bit a tedious process. But it’s way easier to say ‘Yes’ to a magnificent destination like Jaipur, Rajasthan",
       link: "#",
     },
     {
       id: 7,
       image:
-        "https://jaspira.in/wp-content/uploads/elementor/thumbs/Jiapur-7-qxibxuqoh47pp3j7nbukzzvi99qhy4bi74lun4pm3c.webp",
-
-      title: "Makeup & Styling",
+        "https://jaspira.in/wp-content/uploads/elementor/thumbs/Jiapur-6-qxibxsv03g551vlxyb1bv0cl2hzriq41ivavoksefs.webp",
+      title: "Global",
       description:
-        "We handle every aspect of service with utmost care and professionalism.",
-      link: "#",
-    },
-    {
-      id: 8,
-      image:
-        "https://jaspira.in/wp-content/uploads/elementor/thumbs/Shimla-Destiantion-Wedding-e1738400038322-r0uwnpcrgkds8eo0u3p3euq4xz8zs8ww39y4i7rzmg.webp",
-      title: "Destination Weddings",
-      description:
-        "We handle every aspect of service with utmost care and professionalism.",
+        "Find destination wedding places in Karnataka, India, and get the best destination wedding event venue selection services from Jaspira. Choose from the best venues in Coorg, Mysore, Bangalore, coastal beaches in Karnataka, and the Western Ghats hilltops from our curated list.",
       link: "#",
     },
   ];

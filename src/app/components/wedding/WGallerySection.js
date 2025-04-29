@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "motion/react";
 
 export default function WGallerySection() {
   const galleryData = [
@@ -59,20 +60,42 @@ export default function WGallerySection() {
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {galleryData.map((data, index) => (
-          <div key={index} className="overflow-hidden rounded-xl shadow-md">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.7, y: 50 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+              delay: index * 0.2,
+            }}
+            viewport={{ once: true }}
+            key={index}
+            className="overflow-hidden rounded-xl shadow-md"
+          >
             <Image
               src={data.image}
               width={400}
               height={300}
               alt="Wedding moment"
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full hover:scale-110 transition-all "
             />
-          </div>
+          </motion.div>
         ))}
       </div>
-      <a href="#" className="w-gallery-see-more custom-button-anim ">
+      <motion.a
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.6,
+          ease: "easeOut",
+          delay: 0.4,
+        }}
+        viewport={{ once: true }}
+        href="#"
+        className="w-gallery-see-more custom-button-anim "
+      >
         See More
-      </a>
+      </motion.a>
     </section>
   );
 }
