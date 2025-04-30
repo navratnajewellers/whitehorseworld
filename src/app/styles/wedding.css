@@ -166,7 +166,7 @@
   border: solid 2px oklch(78.2% 0.199 91.936);
   display: flex;
   width: fit-content;
-  color: black;
+  color: oklch(85.2% 0.199 91.936);
   padding: 7px 21px;
   margin: auto;
   margin-top: 45px;
