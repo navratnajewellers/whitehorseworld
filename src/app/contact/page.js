@@ -6,6 +6,8 @@ import WhFooter from "../components/WhFooter";
 import WhHeader from "../components/WhHeader";
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import { motion } from "motion/react";
+import { Divider } from "rsuite";
+import { FaDiamond } from "react-icons/fa6";
 
 export default function ContactUsPage() {
   return (
@@ -22,9 +24,17 @@ export default function ContactUsPage() {
           className=" mt-36 w-2/3 m-auto mb-12 "
         >
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-yellow-400 mb-16 ">
+            <h2 className="text-4xl font-bold text-yellow-400 mb-7 ">
               Reach out to us
             </h2>
+            <Divider
+              className=" w-about-divider text-yellow-400 "
+              style={{ width: "25%", margin: "auto", marginBottom: "76px" }}
+            >
+              <FaDiamond size={10} />{" "}
+              <FaDiamond size={20} className=" ml-1 mr-1 " />
+              <FaDiamond size={10} />
+            </Divider>
           </div>
           <ContactForm />
         </motion.div>
@@ -44,6 +54,14 @@ export default function ContactUsPage() {
           >
             Get In Touch
           </motion.h2>
+          <Divider
+            className=" w-about-divider text-yellow-400 "
+            style={{ width: "25%", margin: "auto", marginBottom: "66px" }}
+          >
+            <FaDiamond size={10} />{" "}
+            <FaDiamond size={20} className=" ml-1 mr-1 " />
+            <FaDiamond size={10} />
+          </Divider>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}

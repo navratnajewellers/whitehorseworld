@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import ContactForm from "../ContactForm";
-import { Col, Row } from "rsuite";
+import { Col, Divider, Row } from "rsuite";
+import { FaDiamond } from "react-icons/fa6";
 
 export default function HomeContact() {
   return (
@@ -20,11 +21,19 @@ export default function HomeContact() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-          className=" mb-16  "
+          className=" mb-8  "
         >
           For any inquiries or to explore your vision further, we invite you to
           contact our professional team using the details provided below
         </motion.h5>
+        <Divider
+          className=" w-about-divider text-yellow-400 "
+          style={{ width: "25%", margin: "auto", marginBottom: "96px" }}
+        >
+          <FaDiamond size={10} />{" "}
+          <FaDiamond size={20} className=" ml-1 mr-1 " />
+          <FaDiamond size={10} />
+        </Divider>
       </div>
 
       <Row>

@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { FaDiamond } from "react-icons/fa6";
+import { Divider } from "rsuite";
 
 const workItems = [
   {
@@ -92,11 +94,18 @@ export default function HomeWork2() {
       </motion.h2>
       <motion.h5
         className=" text-center "
-        style={{ marginBottom: "85px", marginTop: "25px" }}
+        style={{ marginBottom: "26px", marginTop: "25px" }}
       >
         A Glimpse into the World-Class Events and Experiences We&apos;ve Brought
         to Life
       </motion.h5>
+      <Divider
+        className=" w-about-divider text-yellow-400 "
+        style={{ width: "25%", margin: "auto", marginBottom: "76px" }}
+      >
+        <FaDiamond size={10} /> <FaDiamond size={20} className=" ml-1 mr-1 " />
+        <FaDiamond size={10} />
+      </Divider>
       <div className="space-y-24 relative ">
         {workItems.map((item, index) => (
           <motion.div

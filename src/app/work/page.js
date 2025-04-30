@@ -1,5 +1,6 @@
 "use client";
 
+import { Divider } from "rsuite";
 import HomeAbout from "../components/home/HomeAbout";
 import HomeCarousel2 from "../components/home/HomeCarousel2";
 import HomeClient from "../components/home/HomeClient";
@@ -11,6 +12,7 @@ import WhFooter from "../components/WhFooter";
 import WhHeader from "../components/WhHeader";
 import "../styles/home.css";
 import { motion } from "motion/react";
+import { FaDiamond } from "react-icons/fa6";
 
 export default function WorkPage() {
   return (
@@ -67,7 +69,7 @@ export default function WorkPage() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-            className=" text-5xl md:text-4xl font-bold text-yellow-400 "
+            className=" text-5xl md:text-4xl font-bold text-yellow-400 mb-2 "
           >
             Where Vision Meets Reality
           </motion.h2>
@@ -79,6 +81,19 @@ export default function WorkPage() {
             Explore the visuals that reflect our dedication to creating
             unforgettable events
           </motion.h5>
+          <Divider
+            className=" w-about-divider text-yellow-400 "
+            style={{
+              width: "25%",
+              margin: "auto",
+              marginBottom: "56px",
+              marginTop: "25px",
+            }}
+          >
+            <FaDiamond size={10} />{" "}
+            <FaDiamond size={20} className=" ml-1 mr-1 " />
+            <FaDiamond size={10} />
+          </Divider>
         </div>
         <HomeCarousel2 />
       </div>

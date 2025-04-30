@@ -2,6 +2,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FaDiamond } from "react-icons/fa6";
+import { Divider } from "rsuite";
 
 export default function HomeClient() {
   return (
@@ -21,11 +23,18 @@ export default function HomeClient() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-        className=" text-center  mb-32 "
+        className=" text-center  mb-8 "
       >
         From Global Giants to Visionary Startups — We Deliver Impact Across
         Every Collaboration
       </motion.h5>
+      <Divider
+        className=" w-about-divider text-yellow-400 "
+        style={{ width: "25%", margin: "auto", marginBottom: "126px" }}
+      >
+        <FaDiamond size={10} /> <FaDiamond size={20} className=" ml-1 mr-1 " />
+        <FaDiamond size={10} />
+      </Divider>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

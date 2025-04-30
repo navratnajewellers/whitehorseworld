@@ -37,7 +37,7 @@ const WhHeader = () => {
           backgroundColor: `${lastScroll < 100 ? "transparent" : "rgba(0, 0, 0, 0.4)"}`,
         }}
       >
-        <nav className="h-sec1-container">
+        {/* <nav className="h-sec1-container">
           <a href="/" className=" h-link ">
             Home
           </a>
@@ -47,7 +47,7 @@ const WhHeader = () => {
           <a href="/work" className=" h-link ">
             Work
           </a>
-        </nav>
+        </nav> */}
         <section className="h-sec2-container">
           <a href="/" className="imageWrapper">
             <img src="/images/whem-logo-all_small.png" alt="company-logo"></img>
@@ -58,11 +58,11 @@ const WhHeader = () => {
               toggle={setMenuOpen}
               size={24}
               duration={0.5}
-              color="#fff"
+              color="#000"
             />
           </div>
         </section>
-        <nav className="h-sec3-container">
+        {/* <nav className="h-sec3-container">
           <a href="/gallery" className=" h-link ">
             Gallery
           </a>
@@ -72,8 +72,9 @@ const WhHeader = () => {
           <a href="/contact" className=" h-link ">
             Contact
           </a>
-        </nav>
-        <motion.nav
+        </nav> */}
+
+        {/* <motion.nav
           initial={{ opacity: 0, y: -115 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
@@ -133,8 +134,108 @@ const WhHeader = () => {
           >
             Contact
           </motion.a>
+        </motion.nav> */}
+        <motion.nav
+          initial={{ opacity: 0, y: -115 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          className={` n-mobile-nav-container flex flex-col border-2 border-black w-full justify-center items-center fixed left-0 bg-black z-50 ${menuOpen ? " top-0" : " top-[-512px]"} `}
+        >
+          <section className="h-sec2-container mt-5 px-9 ">
+            <a href="/" className="imageWrapper">
+              <img
+                src="/images/whem-logo-all_small.png"
+                alt="company-logo"
+              ></img>
+            </a>
+            <div className={`menu-toggle  ${isMobile ? "" : "dis-none"}`}>
+              <Hamburger
+                toggled={menuOpen}
+                toggle={setMenuOpen}
+                size={24}
+                duration={0.5}
+                color="#fff"
+              />
+            </div>
+          </section>
+          <motion.a
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+            href="/"
+            className=" h-link "
+          >
+            Home
+          </motion.a>
+          <motion.a
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
+            href="/about-us"
+            className=" h-link "
+          >
+            Team
+          </motion.a>
+          <motion.a
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
+            href="/work"
+            className=" h-link "
+          >
+            Work
+          </motion.a>
+          <motion.a
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 1.3 }}
+            href="#"
+            className=" h-link "
+          >
+            Gallery
+          </motion.a>
+          <motion.a
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 1.6 }}
+            href="/carrer"
+            className=" h-link "
+          >
+            Carrer
+          </motion.a>
+          <motion.a
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 1.9 }}
+            href="/contact"
+            className=" h-link "
+          >
+            Contact
+          </motion.a>
         </motion.nav>
       </div>
+      <nav
+        className={` h-down-link-container ${isMobile ? "dis-none-imp" : ""} `}
+      >
+        <a href="/" className=" h-link ">
+          Home
+        </a>
+        <a href="/about-us" className=" h-link ">
+          Team
+        </a>
+        <a href="/work" className=" h-link ">
+          Work
+        </a>
+        <a href="/gallery" className=" h-link ">
+          Gallery
+        </a>
+        <a href="/carrer" className=" h-link ">
+          Carrer
+        </a>
+        <a href="/contact" className=" h-link ">
+          Contact
+        </a>
+      </nav>
     </header>
   );
 };

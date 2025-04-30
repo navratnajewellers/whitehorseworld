@@ -66,7 +66,7 @@ const WhFooter = () => {
               <FaEnvelope />
             </a>
             <a
-              href="https://instagram.com/whitehorseworld"
+              href="https://www.instagram.com/whitehorseevent"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"

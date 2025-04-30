@@ -18,10 +18,11 @@ import WInstagram from "./components/wedding/WInstagram";
 export default function Home() {
   return (
     <>
+      <WhHeader />
+
       <HomeAbout />
 
       <div className=" flex justify-center items-center flex-col  text-black w-main-container ">
-        <WhHeader />
         {/* Hero Section */}
 
         {/* Custom 1st section */}
@@ -55,18 +56,11 @@ export default function Home() {
             className=" relative "
           >
             <Image
-              src="https://shaadisquad.com/wp-content/uploads/2024/05/HannaSaif-Wedding16-2.jpg"
+              src="/images/assets/cr=w_1234,h_500.webp"
               width={500}
               height={350}
               alt="Team working"
               className="rounded-2xl shadow-lg w-about-img"
-            />
-            <Image
-              src="/images/gallery/gallery1.jpg"
-              width={300}
-              height={150}
-              alt="Team working"
-              className="rounded-2xl shadow-lg absolute w-about-img w-about-img-small "
             />
           </motion.div>
           <motion.div
@@ -86,7 +80,7 @@ export default function Home() {
               <FaDiamond size={20} className=" ml-1 mr-1 " />
               <FaDiamond size={10} />
             </Divider>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-300 leading-relaxed mt-9 mb-5">
               White Horse World is a premier wedding management company,
               renowned for curating unforgettable events with elegance,
               creativity, and impeccable planning. From intimate ceremonies to
@@ -131,10 +125,10 @@ export default function Home() {
         <section className="bg-pink-100 w-full py-32 text-center relative z-0 overflow-hidden">
           <div
             className="absolute inset-0 -z-10"
-            style={{ filter: "brightness(55%)" }}
+            style={{ filter: "brightness(92%)" }}
           >
             <Image
-              src="/images/inner-banner.jpg"
+              src="/images/SL-112321-46860-27.jpg"
               alt="bg-image"
               fill
               className="object-cover"
@@ -146,7 +140,7 @@ export default function Home() {
           <p className="text-lg mb-9 text-gray-300 ">
             Schedule a free consultation with White Horse World today!
           </p>
-          <a href="#" className="book-consultation-button">
+          <a href="/contact" className="book-consultation-button">
             Book a Consultation
           </a>
         </section>

@@ -1,8 +1,10 @@
 "use client";
 
+import { Divider } from "rsuite";
 import ScrollPage from "../components/ScrollPage";
 import WhFooter from "../components/WhFooter";
 import WhHeader from "../components/WhHeader";
+import { FaDiamond } from "react-icons/fa6";
 
 export default function CareerPage() {
   const positions = [
@@ -125,6 +127,14 @@ export default function CareerPage() {
           <h3 className="text-2xl font-semibold mb-6 text-center text-yellow-400 ">
             Open Positions
           </h3>
+          <Divider
+            className=" w-about-divider text-yellow-400 "
+            style={{ width: "25%", margin: "auto", marginBottom: "76px" }}
+          >
+            <FaDiamond size={10} />{" "}
+            <FaDiamond size={20} className=" ml-1 mr-1 " />
+            <FaDiamond size={10} />
+          </Divider>
           <div className="space-y-6 px-10 py-10 ">
             {positions.map((job, index) => (
               <div
@@ -173,21 +183,6 @@ export default function CareerPage() {
             Submit Resume
           </button>
         </div>
-      </div>
-
-      <div
-        className="relative h-[280px] md:h-[350px] w-full bg-cover bg-center flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/images/work/work-database-management.jpg')",
-        }}
-      >
-        {/* Semi-transparent dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/80"></div>
-
-        {/* Heading Text */}
-        <h2 className="relative text-3xl md:text-5xl text-yellow-400 font-bold text-center px-4 z-10">
-          Build Your Future with White Horse
-        </h2>
       </div>
 
       <WhFooter />

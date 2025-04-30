@@ -1,18 +1,46 @@
 .w-main-container {
   /* background-image: url("/images/bg_7.jpeg"); */
-  background-image: url("/images/background-image-2066855_1280.jpg");
+  /* background-image: url("/images/background-image-2066855_1280.jpg"); */
+  background-image: url("/images/9986992.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  /* border: solid 2px red; */
+  position: relative;
+  z-index: 1;
+}
+
+.w-main-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.295);
+  z-index: -1;
 }
 
 .w-gallery-container {
-  background-image: url("/images/dry-red-gerbera-pod-white-background.jpg");
+  /* background-image: url("/images/dry-red-gerbera-pod-white-background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
+  position: relative;
+  z-index: 1;
+}
+
+.w-gallery-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.295);
+  z-index: -1;
 }
 
 .w-sec1-bg-container {
@@ -207,11 +235,7 @@
 /* wedding about */
 .w-about-img {
   border: solid 4px #ffffff;
-}
-
-.w-about-img-small {
-  bottom: -65px;
-  right: -5px;
+  height: 350px;
 }
 
 /* instagram-follow */

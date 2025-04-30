@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { motion } from "motion/react";
 import { Divider } from "rsuite";
@@ -115,7 +116,7 @@ export default function WGallerySection() {
         <FaDiamond size={10} /> <FaDiamond size={20} className=" ml-1 mr-1 " />
         <FaDiamond size={10} />
       </Divider>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-9 max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-9 max-w-6xl mx-auto">
         {galleryData.map((data, index) => (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -126,12 +127,18 @@ export default function WGallerySection() {
               delay: 0.7,
             }}
             key={index}
-            className="overflow-hidden rounded-xl shadow-md border-2 border-pink-400 "
+            className="overflow-hidden shadow-md "
           >
-            <Image
+            {/* <Image
               src={data.image}
               width={400}
               height={300}
+              alt="Wedding moment"
+              className="object-cover w-full h-full hover:scale-110 transition-all "
+            /> */}
+
+            <img
+              src={data.image}
               alt="Wedding moment"
               className="object-cover w-full h-full hover:scale-110 transition-all "
             />

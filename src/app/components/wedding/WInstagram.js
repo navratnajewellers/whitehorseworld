@@ -45,7 +45,11 @@ export default function WInstagram() {
           ></blockquote>
         </div> */}
 
-        <a href="#" className=" w-follow-instagram ">
+        <a
+          href="https://www.instagram.com/whitehorseevent"
+          target="_blank"
+          className=" w-follow-instagram "
+        >
           <span className=" mr-2 ">
             <FaInstagram />
           </span>

@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
+import { FaDiamond } from "react-icons/fa6";
+import { Divider } from "rsuite";
 
 const Testimonials = () => {
   // Array of video links for testimonials
@@ -25,11 +27,19 @@ const Testimonials = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-          className=" text-center mb-16  "
+          className=" text-center mb-8 "
         >
           Hear from our happy clients about their experience working with White
           Horse World and the quality of our craftsmanship
         </motion.h5>
+        <Divider
+          className=" w-about-divider text-yellow-400 "
+          style={{ width: "25%", margin: "auto", marginBottom: "96px" }}
+        >
+          <FaDiamond size={10} />{" "}
+          <FaDiamond size={20} className=" ml-1 mr-1 " />
+          <FaDiamond size={10} />
+        </Divider>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 ">
           {videoLinks.map((video, index) => (
             <motion.div
