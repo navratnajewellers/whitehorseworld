@@ -16,9 +16,26 @@
 } */
 
 .h-sec1-header-container {
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
   /* background-color: #dc1371; */
   position: relative;
+  z-index: 1;
+}
+
+.h-sec1-header-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("/images/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  /* background-color: aqua; */
+  z-index: -1;
 }
 
 .header-container {
@@ -95,7 +112,8 @@
 } */
 
 .h-sec2-container .imageWrapper {
-  width: 85px;
+  /* width: 85px; */
+  width: 115px;
   display: inline-block;
   perspective: 1000px;
 }
