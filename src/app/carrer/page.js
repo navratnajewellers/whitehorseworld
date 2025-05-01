@@ -52,7 +52,7 @@ export default function CareerPage() {
 
       <WhHeader />
 
-      <div className="bg-black text-white min-h-screen px-6 py-12 mt-14 ">
+      <div className="bg-black text-white min-h-screen px-6 py-9 ">
         {/* Header */}
         <div
           className="relative h-[280px] md:h-[350px] w-full bg-cover bg-center flex items-center justify-center"

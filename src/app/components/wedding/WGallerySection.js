@@ -154,7 +154,7 @@ export default function WGallerySection() {
           delay: 0.4,
         }}
         viewport={{ once: true }}
-        href="#"
+        href="/gallery"
         className="w-gallery-see-more custom-button-anim "
       >
         See More

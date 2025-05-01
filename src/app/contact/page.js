@@ -21,7 +21,7 @@ export default function ContactUsPage() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
-          className=" mt-36 w-2/3 m-auto mb-12 "
+          className=" w-2/3 m-auto mb-12 "
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-yellow-400 mb-7 ">
