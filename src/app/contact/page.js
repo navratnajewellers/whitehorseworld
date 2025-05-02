@@ -8,6 +8,7 @@ import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import { motion } from "motion/react";
 import { Divider } from "rsuite";
 import { FaDiamond } from "react-icons/fa6";
+import ContactForm2 from "../components/ContactForm2";
 
 export default function ContactUsPage() {
   return (
@@ -36,6 +37,8 @@ export default function ContactUsPage() {
               <FaDiamond size={10} />
             </Divider>
           </div>
+          <ContactForm2 />
+
           <ContactForm />
         </motion.div>
 

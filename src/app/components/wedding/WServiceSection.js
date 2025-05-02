@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { Card } from "rsuite";
+import { Card, useMediaQuery } from "rsuite";
 import { motion } from "motion/react";
 
 export default function WServiceSection() {
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+
   const serviceData = [
     {
       id: 1,
@@ -70,7 +72,7 @@ export default function WServiceSection() {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pl-9 ">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pl-8 sm:pl-2 ">
       {serviceData.map((data, index) => (
         <motion.div
           initial={{ opacity: 0, scale: 0.7, y: 50 }}
@@ -84,7 +86,7 @@ export default function WServiceSection() {
           key={data.id}
         >
           <Card
-            width={320}
+            width={isMobile ? 260 : 320}
             shaded
             style={{ color: "black", backgroundColor: "#fffbf6" }}
             className=" custom-shadow4-h-imp "

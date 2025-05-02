@@ -84,12 +84,20 @@ body {
   color: #333; */
   background-color: black;
   color: #ffffff;
-  /* width: 100vw; */
+  /* width: 97vw; */
   width: 100%;
   overflow-x: hidden !important;
-  /* border: solid 1px red; */
+  overscroll-behavior: hidden !important;
+
   position: relative;
   left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 97vw;
+    /* border: solid 4px red; */
+  }
 }
 
 p,
