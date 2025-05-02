@@ -58,7 +58,7 @@ const WhHeader = () => {
               toggle={setMenuOpen}
               size={24}
               duration={0.5}
-              color="#000"
+              color="#fff"
             />
           </div>
         </section>
@@ -174,7 +174,7 @@ const WhHeader = () => {
             href="/about-us"
             className=" h-link "
           >
-            Team
+            About
           </motion.a>
           <motion.a
             initial={{ opacity: 0, y: 50 }}
@@ -221,7 +221,7 @@ const WhHeader = () => {
           Home
         </a>
         <a href="/about-us" className=" h-link ">
-          Team
+          About
         </a>
         <a href="/work" className=" h-link ">
           Work

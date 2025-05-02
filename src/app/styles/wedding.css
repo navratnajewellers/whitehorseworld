@@ -5,7 +5,8 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
+  /* background-size: cover; */
+  background-size: 100% 147%;
   /* border: solid 2px red; */
   position: relative;
   z-index: 1;
@@ -255,4 +256,11 @@
 .w-follow-instagram:hover {
   background-color: oklch(85.2% 0.199 91.936);
   color: black;
+}
+
+/* reponsive for mobile devices */
+@media screen and (max-width: 768px) {
+  .w-main-container {
+    background-image: url("/images/9986992-mobile.jpg");
+  }
 }

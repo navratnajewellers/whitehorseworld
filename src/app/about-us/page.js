@@ -22,7 +22,7 @@ export default function AboutUsPage() {
         </section>
 
         <section className="max-w-6xl mx-auto mt-16 grid md:grid-cols-2 gap-10">
-          <div className="bg-white/5 p-6 rounded-xl shadow-[0_4px_60px_rgba(255,255,255,0.05)] border border-white/10">
+          <div className="bg-white/10 p-6 rounded-xl shadow-[0_4px_60px_rgba(255,255,255,0.05)] border border-white/10">
             <h2 className="text-yellow-400 text-2xl font-semibold mb-4">
               Our Vision
             </h2>
@@ -33,7 +33,7 @@ export default function AboutUsPage() {
             </p>
           </div>
 
-          <div className="bg-white/5 p-6 rounded-xl shadow-[0_4px_60px_rgba(255,255,255,0.05)] border border-white/10">
+          <div className="bg-white/10 p-6 rounded-xl shadow-[0_4px_60px_rgba(255,255,255,0.05)] border border-white/10">
             <h2 className="text-yellow-400 text-2xl font-semibold mb-4">
               Our Mission
             </h2>
@@ -41,6 +41,30 @@ export default function AboutUsPage() {
               To deliver seamless and memorable event experiences for clients
               across industries, ensuring high standards, professionalism, and
               an eye for detail in everything we do.
+            </p>
+          </div>
+
+          <div className="bg-white/10 p-6 rounded-xl shadow-[0_4px_60px_rgba(255,255,255,0.05)] border border-white/10">
+            <h2 className="text-yellow-400 text-2xl font-semibold mb-4">
+              Our Team
+            </h2>
+            <p className="text-gray-300">
+              The White Horse team comprises of passionate professionals with
+              expertise across event planning, marketing, design, production,
+              and client servicing. Every project is handled by a team that’s
+              driven by creativity and execution excellence.
+            </p>
+          </div>
+
+          <div className="bg-white/10 p-6 rounded-xl shadow-[0_4px_60px_rgba(255,255,255,0.05)] border border-white/10">
+            <h2 className="text-yellow-400 text-2xl font-semibold mb-4">
+              Our Story
+            </h2>
+            <p className="text-gray-300">
+              White Horse started with the goal of reshaping the events
+              industry. Frustrated by generic events, our founders envisioned an
+              agency where creativity, logistics, and strategy merged to create
+              powerful, memorable experiences for every audience.
             </p>
           </div>
         </section>
@@ -55,6 +79,45 @@ export default function AboutUsPage() {
             implementation — our team works relentlessly to ensure your event is
             remembered, celebrated, and talked about for years to come.
           </p>
+        </section>
+
+        {/* Values Section */}
+        <section className="bg-yellow-400 text-black py-16 px-4 md:px-20 text-center mt-14 ">
+          <h2 className="text-2xl font-bold mb-8 text-white ">OUR VALUES</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/25 p-6 rounded-xl shadow-[0_4px_60px_rgba(255,255,255,0.05)] border border-white/10">
+              <h4 className="font-semibold text-lg mb-2">Integrity</h4>
+              <p>We honor our commitments and act with transparency.</p>
+            </div>
+            <div className="bg-white/25 p-6 rounded-xl shadow-[0_4px_60px_rgba(255,255,255,0.05)] border border-white/10">
+              <h4 className="font-semibold text-lg mb-2">Innovation</h4>
+              <p>
+                We deliver fresh, trend-setting event ideas that make an impact.
+              </p>
+            </div>
+            <div className="bg-white/25 p-6 rounded-xl shadow-[0_4px_60px_rgba(255,255,255,0.05)] border border-white/10">
+              <h4 className="font-semibold text-lg mb-2">Excellence</h4>
+              <p>We strive to exceed client expectations at every step.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Team Members (Optional – Replace with real images later) */}
+        <section className="bg-black py-16 px-4 md:px-20 text-center">
+          <h2 className="text-yellow-400 text-3xl font-bold mb-8">
+            Meet Our Leadership
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            {["Amit", "Priya", "Ravi", "Neha"].map((name, index) => (
+              <div key={index} className="bg-neutral-900 rounded-xl p-6">
+                <div className="w-24 h-24 mx-auto rounded-full bg-yellow-400 mb-4">
+                  <img src="/images/whem-logo-all_small.png" alt="team" />
+                </div>
+                <h4 className="font-semibold text-lg">{name}</h4>
+                <p className="text-sm">Event Strategist</p>
+              </div>
+            ))}
+          </div>
         </section>
       </div>
 
