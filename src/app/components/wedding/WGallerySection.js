@@ -105,7 +105,7 @@ export default function WGallerySection() {
   ];
 
   return (
-    <section className="w-full  py-20 px-4 w-gallery-container ">
+    <section className="w-full py-20 px-4 w-gallery-container ">
       <h2 className="text-4xl font-bold text-center mb-5 text-yellow-400 ">
         Wedding Collections
       </h2>

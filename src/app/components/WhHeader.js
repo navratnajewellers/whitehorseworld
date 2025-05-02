@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useScroll, useMotionValueEvent } from "motion/react";
+// import { useScroll, useMotionValueEvent } from "motion/react";
 import "../styles/header.css";
 import { useState } from "react";
 import { useMediaQuery } from "rsuite";
@@ -10,33 +10,13 @@ import Hamburger from "hamburger-react";
 import { motion } from "motion/react";
 
 const WhHeader = () => {
-  const { scrollY } = useScroll(); // Framer Motion scroll tracking
-  const [direction, setDirection] = useState("Idle");
-  const [lastScroll, setLastScroll] = useState(0);
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [isMobile] = useMediaQuery("(max-width: 768px)");
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > lastScroll) {
-      setDirection("Down");
-    } else if (latest < lastScroll) {
-      setDirection("Up");
-    }
-    setLastScroll(latest);
-  });
-
   return (
-    <header
-      className={` h-sec1-header-container w-full  ${direction == "Up" || direction == "Idle" ? " head-dir-up " : " head-dir-down "} `}
-    >
-      <div
-        className=" header-container "
-        style={{
-          backgroundColor: `${lastScroll < 100 ? "transparent" : "rgba(0, 0, 0, 0.4)"}`,
-        }}
-      >
+    <header className={` h-sec1-header-container w-full  `}>
+      <div className=" header-container ">
         {/* <nav className="h-sec1-container">
           <a href="/" className=" h-link ">
             Home

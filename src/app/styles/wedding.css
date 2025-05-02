@@ -5,8 +5,8 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  /* background-size: cover; */
-  background-size: 100% 147%;
+  background-size: cover;
+  /* background-size: 100% 147%; */
   /* border: solid 2px red; */
   position: relative;
   z-index: 1;
@@ -270,6 +270,5 @@
   .w-main-container {
     background-image: url("/images/9986992-tablet.jpg");
     background-size: cover;
-    /* border: solid 5px blue; */
   }
 }

@@ -16,7 +16,7 @@ export default function WInstagram() {
   return (
     <>
       <section className="  w-full flex justify-center items-center flex-col py-16 ">
-        <h2 className=" text-5xl md:text-4xl font-bold text-yellow-400 ">
+        <h2 className=" text-3xl md:text-4xl font-bold text-yellow-400 text-center ">
           INSTAGRAM FEED
         </h2>
 

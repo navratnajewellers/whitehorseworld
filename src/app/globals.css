@@ -25,6 +25,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
+/* fix next js body overflow-x */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden; /* Critical for mobile */
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -87,17 +102,10 @@ body {
   /* width: 97vw; */
   width: 100%;
   overflow-x: hidden !important;
-  overscroll-behavior: hidden !important;
-
+  /* overscroll-behavior: hidden !important; */
+  overscroll-behavior-x: none !important; /* optional */
   position: relative;
   left: 0;
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    width: 97vw;
-    /* border: solid 4px red; */
-  }
 }
 
 p,

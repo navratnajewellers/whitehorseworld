@@ -122,7 +122,7 @@ export default function Home() {
         {/* <WTestimonialsSection /> */}
 
         {/* Contact CTA */}
-        <section className="bg-pink-100 w-full py-32 text-center relative z-0 overflow-hidden">
+        <section className="bg-pink-100 w-full py-32 px-7 text-center relative z-0 overflow-hidden">
           <div
             className="absolute inset-0 -z-10"
             style={{ filter: "brightness(92%)" }}
@@ -134,7 +134,7 @@ export default function Home() {
               className="object-cover"
             />
           </div>
-          <h2 className="text-4xl font-bold mb-4 text-yellow-400 ">
+          <h2 className="text-4xl font-bold mb-5 text-yellow-400 ">
             Let’s Make Your Wedding Magical
           </h2>
           <p className="text-lg mb-9 text-gray-300 ">
