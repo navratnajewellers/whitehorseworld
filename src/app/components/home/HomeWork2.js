@@ -106,7 +106,7 @@ export default function HomeWork2() {
         <FaDiamond size={10} /> <FaDiamond size={20} className=" ml-1 mr-1 " />
         <FaDiamond size={10} />
       </Divider>
-      <div className="space-y-24 relative ">
+      <div className="space-y-24 h-screen overflow-y-scroll snap-y snap-mandatory hide-scrollbar ">
         {workItems.map((item, index) => (
           <motion.div
             key={index}
@@ -114,16 +114,16 @@ export default function HomeWork2() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             // viewport={{ once: true }}
-            className={`flex flex-col md:flex-row items-center gap-10 ${
+            className={`h-screen w-[92%] snap-start m-auto flex flex-col md:flex-row items-center gap-10 ${
               index % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
-            style={{
-              position: "sticky",
-              top: "4vh",
-              backgroundColor: "black",
-              //   marginBottom: "250px",
-              minHeight: "100vh",
-            }}
+            // style={{
+            //   position: "sticky",
+            //   top: "4vh",
+            //   backgroundColor: "black",
+            //   //   marginBottom: "250px",
+            //   minHeight: "100vh",
+            // }}
           >
             <motion.div
               initial={{ opacity: 0, x: -80 }}

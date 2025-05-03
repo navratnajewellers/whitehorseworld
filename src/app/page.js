@@ -14,11 +14,17 @@ import HomeAbout from "./components/home/HomeAbout";
 import { Divider } from "rsuite";
 import { FaDiamond } from "react-icons/fa6";
 import WInstagram from "./components/wedding/WInstagram";
+import WGallerySection2 from "./components/wedding/WGallerySection2";
 
 export default function Home() {
   return (
     <>
       <WhHeader />
+
+      <WGallerySection2 requiredModal={false} />
+
+      {/* Custom Gallery */}
+      {/* <WGallerySection /> */}
 
       <HomeAbout />
 
@@ -44,7 +50,7 @@ export default function Home() {
         </section> */}
 
         {/* About Us */}
-        <section className="w-full px-16 py-28 grid md:grid-cols-2 gap-12 items-center mb-8 ">
+        <section className="w-full px-16 py-28 grid md:grid-cols-2 gap-12 items-center bg-gray-100 ">
           <motion.div
             initial={{ opacity: 0, x: -50, y: 50 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -80,7 +86,7 @@ export default function Home() {
               <FaDiamond size={20} className=" ml-1 mr-1 " />
               <FaDiamond size={10} />
             </Divider>
-            <p className="text-lg text-gray-300 leading-relaxed mt-9 mb-5">
+            <p className="text-lg text-gray-500 leading-relaxed mt-9 mb-5">
               White Horse World is a premier wedding management company,
               renowned for curating unforgettable events with elegance,
               creativity, and impeccable planning. From intimate ceremonies to
@@ -99,11 +105,8 @@ export default function Home() {
           </motion.div>
         </section>
 
-        {/* Custom Gallery */}
-        <WGallerySection />
-
         {/* custom service */}
-        <section className="w-full max-w-7xl px-4 py-20 text-center ">
+        <section className="w-full max-w-7xl px-4 py-20 text-center bg-blue-50 ">
           <h2 className="text-4xl font-bold text-yellow-400 mb-5 ">
             Destination Wedding Venues
           </h2>
@@ -122,22 +125,14 @@ export default function Home() {
         {/* <WTestimonialsSection /> */}
 
         {/* Contact CTA */}
-        <section className="bg-pink-100 w-full py-32 px-7 text-center relative z-0 overflow-hidden">
-          <div
-            className="absolute inset-0 -z-10"
-            style={{ filter: "brightness(92%)" }}
-          >
-            <Image
-              src="/images/SL-112321-46860-27.jpg"
-              alt="bg-image"
-              fill
-              className="object-cover"
-            />
-          </div>
+        <section
+          className=" w-full py-32 px-7 text-center overflow-hidden "
+          style={{ backgroundColor: "#FCE5F5" }}
+        >
           <h2 className="text-4xl font-bold mb-5 text-yellow-400 ">
             Let’s Make Your Wedding Magical
           </h2>
-          <p className="text-lg mb-9 text-gray-300 ">
+          <p className="text-lg mb-9 text-gray-500 ">
             Schedule a free consultation with White Horse World today!
           </p>
           <a href="/contact" className="book-consultation-button">

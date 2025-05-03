@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import WBreadcumb from "../components/WBreadcumb";
 import WhFooter from "../components/WhFooter";
 import WhHeader from "../components/WhHeader";
 
@@ -6,6 +7,8 @@ export default function AboutUsPage() {
   return (
     <>
       <WhHeader />
+
+      <WBreadcumb headingText="About Us" />
 
       <div className="bg-black text-white min-h-screen py-16 px-6 md:px-20">
         <section className="max-w-5xl mx-auto text-center">

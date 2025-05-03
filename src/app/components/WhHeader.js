@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useMediaQuery } from "rsuite";
 import Hamburger from "hamburger-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const WhHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +16,14 @@ const WhHeader = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
 
   return (
-    <header className={` h-sec1-header-container w-full  `}>
+    <header className={` h-sec1-header-container w-full z-0   `}>
+      <Image
+        src="/images/9986992.jpg"
+        alt="bg-image"
+        fill
+        className=" object-cover "
+        style={{ zIndex: "-1" }}
+      />
       <div className=" header-container ">
         {/* <nav className="h-sec1-container">
           <a href="/" className=" h-link ">

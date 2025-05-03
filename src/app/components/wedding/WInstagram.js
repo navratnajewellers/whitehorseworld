@@ -4,6 +4,7 @@
 import { FaInstagram } from "react-icons/fa";
 import { FaDiamond } from "react-icons/fa6";
 import { Divider } from "rsuite";
+import { motion } from "motion/react";
 
 export default function WInstagram() {
   //   useEffect(() => {
@@ -15,10 +16,22 @@ export default function WInstagram() {
 
   return (
     <>
-      <section className="  w-full flex justify-center items-center flex-col py-16 ">
-        <h2 className=" text-3xl md:text-4xl font-bold text-yellow-400 text-center ">
+      <section
+        className="  w-full flex justify-center items-center flex-col py-16 "
+        style={{ backgroundColor: "#F9F0E7" }}
+      >
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+            delay: 0.4,
+          }}
+          className=" text-3xl md:text-4xl font-bold text-yellow-400 text-center "
+        >
           INSTAGRAM FEED
-        </h2>
+        </motion.h2>
 
         <Divider
           className=" w-about-divider text-yellow-400 m-auto "
@@ -45,7 +58,14 @@ export default function WInstagram() {
           ></blockquote>
         </div> */}
 
-        <a
+        <motion.a
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+            delay: 0.6,
+          }}
           href="https://www.instagram.com/whitehorseevent"
           target="_blank"
           className=" w-follow-instagram "
@@ -54,7 +74,7 @@ export default function WInstagram() {
             <FaInstagram />
           </span>
           <span>Follow us on Instagram</span>
-        </a>
+        </motion.a>
       </section>
     </>
   );

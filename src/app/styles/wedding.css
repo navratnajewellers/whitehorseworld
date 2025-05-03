@@ -1,49 +1,3 @@
-.w-main-container {
-  /* background-image: url("/images/bg_7.jpeg"); */
-  /* background-image: url("/images/background-image-2066855_1280.jpg"); */
-  background-image: url("/images/9986992.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  /* background-size: 100% 147%; */
-  /* border: solid 2px red; */
-  position: relative;
-  z-index: 1;
-}
-
-.w-main-container::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.295);
-  z-index: -1;
-}
-
-.w-gallery-container {
-  /* background-image: url("/images/dry-red-gerbera-pod-white-background.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover; */
-  position: relative;
-  z-index: 1;
-}
-
-.w-gallery-container::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.295);
-  z-index: -1;
-}
-
 .w-sec1-bg-container {
   /* border: solid 1px blue; */
   filter: brightness(60%);
@@ -181,7 +135,7 @@
 .book-consultation-button {
   border: solid 2px oklch(85.2% 0.199 91.936);
   padding: 9px 21px;
-  color: #ffffff;
+  color: black;
   border-radius: 12px;
   display: inline-block;
   overflow: hidden;
@@ -195,7 +149,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 25px;
+  width: 10px;
   height: 300%;
   transform: rotate(35deg) translateY(-50%);
   background: linear-gradient(
@@ -230,7 +184,7 @@
 }
 
 .book-consultation-button:hover {
-  color: black;
+  color: #ffffff;
 }
 
 /* wedding about */
@@ -256,19 +210,4 @@
 .w-follow-instagram:hover {
   background-color: oklch(85.2% 0.199 91.936);
   color: black;
-}
-
-/* reponsive for mobile devices */
-@media screen and (max-width: 768px) {
-  .w-main-container {
-    background-image: url("/images/9986992-mobile.jpg");
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1110px) {
-  .w-main-container {
-    background-image: url("/images/9986992-tablet.jpg");
-    background-size: cover;
-  }
 }

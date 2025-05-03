@@ -102,8 +102,6 @@ body {
   /* width: 97vw; */
   width: 100%;
   overflow-x: hidden !important;
-  /* overscroll-behavior: hidden !important; */
-  overscroll-behavior-x: none !important; /* optional */
   position: relative;
   left: 0;
 }
@@ -326,4 +324,15 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
