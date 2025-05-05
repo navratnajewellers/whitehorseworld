@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap");
+
 /* header up down container */
 /* .h-sec1-header-container {
   position: fixed;
@@ -19,9 +21,8 @@
   /* background-color: #f8f8f8; */
   /* background-color: #dc1371; */
   /* background-color: black; */
-  position: relative;
   /* z-index: 1; */
-  padding-top: 10px;
+  padding-top: 1px;
 }
 
 /* header background */
@@ -62,7 +63,7 @@
   justify-content: center;
   align-items: center;
   color: black;
-  padding: 25px;
+  padding: 10px 25px 15px;
 }
 
 .h-down-link-container .h-link:last-child {
@@ -76,8 +77,9 @@
   font-weight: 600;
   /* color: rgb(35, 205, 205); */
   /* font-family: var(--font-geist-sans), sans-serif !important; */
-  /* color: rgb(0, 0, 0); */
-  color: #ffffff;
+  font-family: "Tagesschrift", sans-serif !important;
+  color: rgb(0, 0, 0);
+  /* color: #ffffff; */
   position: relative;
   transition: all 0.3s ease;
 }

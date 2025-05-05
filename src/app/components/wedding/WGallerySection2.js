@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Modal } from "rsuite";
 import { useState } from "react";
 import { motion } from "motion/react";
+import "../../styles/wedding.css";
 
 const images = [
   "https://images.squarespace-cdn.com/content/v1/57122b3140261dc8badfe6b7/1586375325612-PG0ZKMZ25ZHLGXE9ZRZI/Shangri+La+Set+Up+Dec+8-59+Edit-2.jpg",
@@ -35,6 +36,11 @@ const images = [
   "https://images.pexels.com/photos/7666519/pexels-photo-7666519.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
   "https://images.pexels.com/photos/7666503/pexels-photo-7666503.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
   "https://images.pexels.com/photos/3947955/pexels-photo-3947955.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  "https://cdn.pixabay.com/photo/2016/11/21/15/58/wedding-1846114_640.jpg",
+  "https://cdn.pixabay.com/photo/2017/05/23/22/33/birthday-2338813_640.jpg",
+  "https://cdn.pixabay.com/photo/2016/02/01/18/26/wedding-table-1174135_640.jpg",
+  "https://cdn.pixabay.com/photo/2021/12/23/04/34/bride-6888615_640.jpg",
+  "https://cdn.pixabay.com/photo/2022/01/10/04/36/flower-6927351_640.jpg",
 ];
 
 export default function WGallerySection2({ requiredModal = true }) {
@@ -47,7 +53,7 @@ export default function WGallerySection2({ requiredModal = true }) {
   };
 
   return (
-    <section className="py-16 px-4 bg-gray-100">
+    <section className="py-16 px-4">
       {/* <h2 className="text-4xl font-bold text-center mb-16 text-yellow-400 ">
         Our Wedding Moments
       </h2> */}

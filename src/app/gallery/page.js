@@ -1,9 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 "use client"; // Only if using Next.js App Router
+
 import { useState } from "react";
 import { Button, Divider, Modal } from "rsuite";
 import WhHeader from "../components/WhHeader";
 import { FaDiamond } from "react-icons/fa6";
+import WGallerySection2 from "../components/wedding/WGallerySection2";
 
 export default function GalleryPage() {
   const images = [
@@ -217,7 +218,9 @@ export default function GalleryPage() {
           <FaDiamond size={20} className=" ml-1 mr-1 " />
           <FaDiamond size={10} />
         </Divider>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+        <WGallerySection2 />
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {images.map((img, idx) => (
             <div key={idx} className="cursor-pointer">
               <img
@@ -249,7 +252,7 @@ export default function GalleryPage() {
               Close
             </Button>
           </Modal.Footer>
-        </Modal>
+        </Modal> */}
       </div>
     </>
   );

@@ -35,6 +35,7 @@ export default function AboutUsPage() {
     <>
       <WhHeader />
 
+      <div className=" pt-4 "></div>
       <WBreadcumb headingText="About Us" />
 
       <div className="bg-black text-white min-h-screen py-16">
