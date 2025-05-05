@@ -18,11 +18,11 @@ const WhHeader = () => {
   return (
     <header className={` h-sec1-header-container w-full z-0   `}>
       <Image
-        src="/images/9986992.jpg"
+        src="/images/background-image-2066855_1280.jpg"
         alt="bg-image"
         fill
         className=" object-cover "
-        style={{ zIndex: "-1" }}
+        style={{ zIndex: "-1", filter: "brightness(50%)" }}
       />
       <div className=" header-container ">
         {/* <nav className="h-sec1-container">
