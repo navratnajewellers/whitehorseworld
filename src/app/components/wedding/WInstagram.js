@@ -1,18 +1,18 @@
 "use client";
 
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FaDiamond } from "react-icons/fa6";
 import { Divider } from "rsuite";
 import { motion } from "motion/react";
 
 export default function WInstagram() {
-  //   useEffect(() => {
-  //     const script = document.createElement("script");
-  //     script.setAttribute("src", "https://www.instagram.com/embed.js");
-  //     script.async = true;
-  //     document.body.appendChild(script);
-  //   }, []);
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.setAttribute("src", "https://www.instagram.com/embed.js");
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <>
@@ -42,13 +42,13 @@ export default function WInstagram() {
           <FaDiamond size={10} />
         </Divider>
 
-        {/* <div
+        <div
           dangerouslySetInnerHTML={{
             __html: `
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DBWu_2jT9Pn/" data-instgrm-version="14" style="max-width:540px; width:100%; margin:auto;"></blockquote>
         `,
           }}
-        /> */}
+        />
 
         {/* <div>
           <blockquote

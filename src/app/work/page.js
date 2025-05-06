@@ -55,8 +55,6 @@ export default function WorkPage() {
             </motion.div>
           </section> */}
 
-      <HomeAbout />
-
       <HomeWork2 />
 
       {/* <HomeWork /> */}
