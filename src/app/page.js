@@ -16,10 +16,13 @@ import { Divider } from "rsuite";
 import { FaDiamond } from "react-icons/fa6";
 import WInstagram from "./components/wedding/WInstagram";
 import WGallerySection2 from "./components/wedding/WGallerySection2";
+import ScrollPage from "./components/ScrollPage";
 
 export default function Home() {
   return (
     <div className=" bg-gray-100 ">
+      <ScrollPage />
+
       <WhHeader pageTheme="white" />
 
       <section className=" bg-gray-100 ">
