@@ -206,13 +206,13 @@ export default function GalleryPage() {
   return (
     <>
       <WhHeader />
-      <div className="p-6 bg-black text-white py-7 ">
+      <div className="p-6 bg-black text-white py-7 mt-11 ">
         <h1 className="text-3xl font-bold text-center mb-5 text-yellow-400 ">
           Wedding Images
         </h1>
         <Divider
           className=" w-about-divider text-yellow-400 "
-          style={{ width: "25%", margin: "auto", marginBottom: "76px" }}
+          style={{ width: "25%", margin: "auto", marginBottom: "26px" }}
         >
           <FaDiamond size={10} />{" "}
           <FaDiamond size={20} className=" ml-1 mr-1 " />

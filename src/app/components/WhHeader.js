@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-// import { useScroll, useMotionValueEvent } from "motion/react";
+import { useScroll, useMotionValueEvent } from "motion/react";
 import "../styles/header.css";
 import { useState } from "react";
 import { useMediaQuery } from "rsuite";
@@ -10,28 +10,32 @@ import Hamburger from "hamburger-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 
-const WhHeader = () => {
+const WhHeader = ({ pageTheme = "black" }) => {
+  const { scrollY } = useScroll(); // Framer Motion scroll tracking
+  const [direction, setDirection] = useState("Idle");
+  const [lastScroll, setLastScroll] = useState(0);
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [isMobile] = useMediaQuery("(max-width: 768px)");
 
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > lastScroll) {
+      setDirection("Down");
+    } else if (latest < lastScroll) {
+      setDirection("Up");
+    }
+    setLastScroll(latest);
+  });
+
   return (
     <>
       <header
-        className={` h-sec1-header-container w-full z-50 bg-gray-100 shadow-md fixed top-0 `}
+        className={` h-sec1-header-container w-full z-50 ${pageTheme == "black" ? "bg-black" : "bg-gray-100"} shadow-md fixed top-0 `}
       >
-        <div className=" header-container ">
-          {/* <nav className="h-sec1-container">
-          <a href="/" className=" h-link ">
-          Home
-          </a>
-          <a href="/about-us" className=" h-link ">
-          Team
-          </a>
-          <a href="/work" className=" h-link ">
-          Work
-          </a>
-          </nav> */}
+        <div
+          className={` header-container ${lastScroll < 100 ? "flex-col justify-center" : "flex-row justify-between"} `}
+        >
           <section className="h-sec2-container">
             <a href="/" className="imageWrapper">
               <img
@@ -45,90 +49,19 @@ const WhHeader = () => {
                 toggle={setMenuOpen}
                 size={24}
                 duration={0.5}
-                color="#000"
+                color={`${pageTheme == "black" ? "#fff" : "#000"}`}
               />
             </div>
           </section>
-          {/* <nav className="h-sec3-container">
-          <a href="/gallery" className=" h-link ">
-            Gallery
-          </a>
-          <a href="/carrer" className=" h-link ">
-          Carrer
-          </a>
-          <a href="/contact" className=" h-link ">
-          Contact
-          </a>
-          </nav> */}
 
-          {/* <motion.nav
-          initial={{ opacity: 0, y: -115 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-          className={` mobile-header-nav-container ${isMobile ? "" : "dis-none"} ${menuOpen ? "m-h-nav-active" : ""} `}
-          >
-          <motion.a
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-          href="/"
-          className=" h-link "
-          >
-          Home
-          </motion.a>
-          <motion.a
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
-          href="/about-us"
-            className=" h-link "
-            >
-            Team
-            </motion.a>
-            <motion.a
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
-            href="/work"
-            className=" h-link "
-            >
-            Work
-            </motion.a>
-            <motion.a
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 1.3 }}
-            href="#"
-            className=" h-link "
-          >
-            Gallery
-          </motion.a>
-          <motion.a
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 1.6 }}
-          href="/carrer"
-          className=" h-link "
-          >
-          Carrer
-          </motion.a>
-          <motion.a
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 1.9 }}
-          href="/contact"
-          className=" h-link "
-          >
-          Contact
-          </motion.a>
-          </motion.nav> */}
+          {/* mobile header */}
           <motion.nav
             initial={{ opacity: 0, y: -115 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-            className={` n-mobile-nav-container flex flex-col border-2 border-black w-full justify-center items-center fixed left-0 bg-black z-50 ${menuOpen ? " top-0" : " top-[-512px]"} `}
+            className={` n-mobile-nav-container flex flex-col border-2 border-black w-full justify-center items-center fixed left-0 bg-black z-50 ${menuOpen ? " top-0" : " top-[-612px]"} `}
           >
-            <section className="h-sec2-container mt-5 px-9 ">
+            <section className="h-sec2-container mt-5 mb-16 px-9 ">
               <a href="/" className="imageWrapper">
                 <img
                   src="/images/whem-logo-all_small.png"
@@ -145,19 +78,11 @@ const WhHeader = () => {
                 />
               </div>
             </section>
+
             <motion.a
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-              href="/"
-              className=" h-link "
-            >
-              Home
-            </motion.a>
-            <motion.a
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
               href="/about-us"
               className=" h-link "
             >
@@ -166,63 +91,75 @@ const WhHeader = () => {
             <motion.a
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
-              href="/work"
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
+              href="/services"
               className=" h-link "
             >
-              Work
+              Services
+            </motion.a>
+            <motion.a
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
+              href="/portfolio"
+              className=" h-link "
+            >
+              Portfolio
             </motion.a>
             <motion.a
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 1.3 }}
-              href="#"
+              href="/taran-signature-wedding"
               className=" h-link "
             >
-              Gallery
+              Taran Signature Wedding
             </motion.a>
             <motion.a
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 1.6 }}
-              href="/carrer"
-              className=" h-link "
-            >
-              Carrer
-            </motion.a>
-            <motion.a
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 1.9 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 1.7 }}
               href="/contact"
               className=" h-link "
             >
               Contact
             </motion.a>
           </motion.nav>
+          <nav
+            className={` h-down-link-container ${isMobile ? "dis-none-imp" : ""}  `}
+          >
+            <a
+              href="/about-us"
+              className={` h-link ${pageTheme == "black" ? "text-white" : "text-black"} `}
+            >
+              About
+            </a>
+            <a
+              href="/services"
+              className={` h-link ${pageTheme == "black" ? "text-white" : "text-black"} `}
+            >
+              Services
+            </a>
+            <a
+              href="/portfolio"
+              className={` h-link ${pageTheme == "black" ? "text-white" : "text-black"} `}
+            >
+              Portfolio
+            </a>
+            <a
+              href="/taran-signature-wedding"
+              className={` h-link ${pageTheme == "black" ? "text-white" : "text-black"} `}
+            >
+              Taran Signature Wedding
+            </a>
+            <a
+              href="/contact"
+              className={` h-link ${pageTheme == "black" ? "text-white" : "text-black"} `}
+            >
+              Contact
+            </a>
+          </nav>
         </div>
-        <nav
-          className={` h-down-link-container ${isMobile ? "dis-none-imp" : ""} `}
-        >
-          <a href="/" className=" h-link ">
-            Home
-          </a>
-          <a href="/about-us" className=" h-link ">
-            About
-          </a>
-          <a href="/work" className=" h-link ">
-            Work
-          </a>
-          <a href="/gallery" className=" h-link ">
-            Gallery
-          </a>
-          <a href="/carrer" className=" h-link ">
-            Carrer
-          </a>
-          <a href="/contact" className=" h-link ">
-            Contact
-          </a>
-        </nav>
       </header>
 
       <div className=" pt-32 md:pt-44 "></div>
