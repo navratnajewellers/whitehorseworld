@@ -130,31 +130,31 @@ const WhHeader = ({ pageTheme = "black" }) => {
           >
             <a
               href="/about-us"
-              className={` h-link ${pageTheme == "black" ? "text-white" : "text-black"} `}
+              className={` h-link hover:!text-yellow-400 ${pageTheme == "black" ? "!text-white" : "!text-black"} `}
             >
               About
             </a>
             <a
               href="/services"
-              className={` h-link ${pageTheme == "black" ? "text-white" : "text-black"} `}
+              className={` h-link hover:!text-yellow-400 ${pageTheme == "black" ? "!text-white" : "!text-black"} `}
             >
               Services
             </a>
             <a
               href="/portfolio"
-              className={` h-link ${pageTheme == "black" ? "text-white" : "text-black"} `}
+              className={` h-link hover:!text-yellow-400 ${pageTheme == "black" ? "!text-white" : "!text-black"} `}
             >
               Portfolio
             </a>
             <a
               href="/taran-signature-wedding"
-              className={` h-link ${pageTheme == "black" ? "text-white" : "text-black"} `}
+              className={` h-link hover:!text-yellow-400 ${pageTheme == "black" ? "!text-white" : "!text-black"} `}
             >
               Taran Signature Wedding
             </a>
             <a
               href="/contact"
-              className={` h-link ${pageTheme == "black" ? "text-white" : "text-black"} `}
+              className={` h-link hover:!text-yellow-400 ${pageTheme == "black" ? "!text-white" : "!text-black"} `}
             >
               Contact
             </a>

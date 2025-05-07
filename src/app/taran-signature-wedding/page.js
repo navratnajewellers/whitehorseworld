@@ -10,7 +10,7 @@ import WhHeader from "../components/WhHeader";
 
 export default function PlanWeddingPage() {
   return (
-    <div>
+    <div className=" bg-gray-100 ">
       <WhHeader pageTheme="white" />
 
       <section className=" relative w-full h-[950px] ">

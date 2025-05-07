@@ -26,7 +26,7 @@ export default function Home() {
       <WhHeader pageTheme="white" />
 
       <section className=" bg-gray-100 ">
-        <WGallerySection2 requiredModal={false} />
+        <WGallerySection2 requiredModal={false} renderImage="half" />
       </section>
 
       {/* Custom Gallery */}

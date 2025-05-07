@@ -6,7 +6,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import "../../styles/wedding.css";
 
-const images = [
+const originalImages = [
   "https://images.squarespace-cdn.com/content/v1/57122b3140261dc8badfe6b7/1586375325612-PG0ZKMZ25ZHLGXE9ZRZI/Shangri+La+Set+Up+Dec+8-59+Edit-2.jpg",
   "https://images.squarespace-cdn.com/content/v1/57122b3140261dc8badfe6b7/1586375027830-5EQ6C91JGM4E0AVPX9LW/Edit.jpg",
   "https://images.squarespace-cdn.com/content/v1/57122b3140261dc8badfe6b7/1586375059977-PO2609JI5LPS22KK8WC8/HOTC4081-2.jpg",
@@ -43,14 +43,34 @@ const images = [
   "https://cdn.pixabay.com/photo/2022/01/10/04/36/flower-6927351_640.jpg",
 ];
 
-export default function WGallerySection2({ requiredModal = true }) {
+export default function WGallerySection2({
+  requiredModal = true,
+  renderImage = "full",
+}) {
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
+
+  // render image full or half on base of props
+  const images = [];
+
+  if (renderImage != "full") {
+    const tempImage = originalImages.slice(0, originalImages.length / 2);
+    images.push(...tempImage);
+  } else {
+    images.push(...originalImages);
+  }
 
   const handleOpen = (img) => {
     setSelectedImage(img);
     setOpen(true);
   };
+
+  // console.log("Images total length is ", originalImages.length);
+  // const newImage = originalImages.slice(0, 10);
+  // console.log(newImage);
+  // console.log("new image total length is ", newImage.length);
+
+  console.log("length of new image is ", images.length);
 
   return (
     <section className="py-16 px-4">
@@ -80,22 +100,24 @@ export default function WGallerySection2({ requiredModal = true }) {
         ))}
       </div>
 
-      <div>
-        <motion.a
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.6,
-            ease: "easeOut",
-            delay: 0.4,
-          }}
-          viewport={{ once: true }}
-          href="/gallery"
-          className="w-gallery-see-more custom-button-anim "
-        >
-          See More
-        </motion.a>
-      </div>
+      {!requiredModal && (
+        <div>
+          <motion.a
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+              delay: 0.4,
+            }}
+            viewport={{ once: true }}
+            href="/gallery"
+            className="w-gallery-see-more custom-button-anim "
+          >
+            See More
+          </motion.a>
+        </div>
+      )}
 
       <Modal open={open} onClose={() => setOpen(false)} size="md">
         <Modal.Body className="flex justify-center items-center">
